@@ -1,14 +1,24 @@
 const input = document.getElementById("editor")
 
 function boldText(){
-    input.style.fontWeight = 'bold';
+    if (input.style.fontWeight === 'bold') {
+        input.style.fontWeight = 'normal';
+    } else {
+        input.style.fontWeight = 'bold';
+    }
 }
 function italicText(){
-    input.style.fontStyle = 'italic';
-}
+    if (input.style.fontStyle === 'italic') {
+        input.style.fontStyle = 'normal';
+    } else {
+        input.style.fontStyle = 'italic';
+    }}
 function underlineText(){
-    input.style.textDecoration = 'underline';
-}
+    if (input.style.textDecoration === 'underline') {
+        input.style.textDecoration = 'none';
+    } else {
+        input.style.textDecoration = 'underline';
+    }}
 function changeFont(){
     const newFont = prompt("Enter font family: ", "Arial" );
     input.style.fontFamily= newFont;
